@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hệ Thống Quản Lý Sự Cố KNH</title>
+<title>Hệ Thống theo dõi Sự Cố Hầm kỹ thuật và thiết bị trên mạng lưới</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
@@ -188,7 +188,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);margin-top
   <div class="login-card">
     <div class="login-logo">
       <div class="login-logo-icon">💧</div>
-      <div><div class="login-logo-text">Hệ Thống Quản Lý Sự Cố KNH</div><div class="login-logo-sub">DCC · Phòng Kỹ Thuật · TP.HCM</div></div>
+      <div><div class="login-logo-text">Hệ Thống theo dõi Sự Cố Hầm kỹ thuật và thiết bị trên mạng lưới</div><div class="login-logo-sub">Xí nghiệp Truyền dẫn nước sạch - DCC</div></div>
     </div>
     <h2 class="login-title">Đăng Nhập</h2>
     <p class="login-sub">Vui lòng xác thực để tiếp tục</p>
@@ -196,9 +196,9 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);margin-top
     <div class="form-group"><label class="form-label">Mật khẩu</label><input class="form-input" id="loginPass" type="password" placeholder="Nhập mật khẩu..."></div>
     <button class="btn-login" onclick="doLogin()">🔐 Đăng Nhập</button>
     <div class="login-hint">
-      <div style="margin-bottom:5px;font-weight:600;color:var(--text2)">Tài khoản mặc định:</div>
-      <div>👑 Admin: <strong>admin</strong> / <strong>admin123</strong></div>
-      <div style="margin-top:2px">👤 User: <strong>user1</strong> / <strong>user123</strong></div>
+      <div style="margin-bottom:5px;font-weight:600;color:var(--text2)">Lưu ý:</div>
+      <div>👑 Đổi kật khẩu khi được cấp tài khoản <strong></div>
+      <div style="margin-top:2px">👤 Thông tin liên hệ: <strong>Trung tâm</strong></div>
     </div>
   </div>
 </div>
@@ -207,7 +207,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);margin-top
 <header>
   <div class="logo">
     <div class="logo-icon">💧</div>
-    <div><div class="logo-text">Quản Lý Sự Cố KNH</div><div class="logo-sub">DCC · TP.HCM</div></div>
+    <div><div class="logo-text">Hệ Thống theo dõi Sự Cố Hầm kỹ thuật và thiết bị trên mạng lưới</div><div class="logo-sub">Trung tâm Điều khiển phân phối</div></div>
   </div>
   <nav>
     <button class="nav-btn active" onclick="showPage('dashboard',this)">📊 Tổng Quan</button>
@@ -229,7 +229,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);margin-top
 <main>
 <div class="page active" id="page-dashboard">
   <div class="hero">
-    <div><h1 class="hero-title" id="dashTitle">Tổng Hợp Sự Cố KNH</h1><p class="hero-sub" id="dashSub">// DCC · Phòng Quản Lý Kỹ Thuật</p></div>
+    <div><h1 class="hero-title" id="dashTitle">Tổng Hợp Sự Cố Hầm kỹ thuật và các thiết bị trên mạng lưới</h1><p class="hero-sub" id="dashSub">// XNTD · Trung tâm ĐKPP</p></div>
     <div class="hero-badge"><div class="dot"></div><span id="dashDate">–</span></div>
   </div>
   <div class="stats-grid" id="statsGrid"></div>
