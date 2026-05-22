@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hệ Thống theo dõi Sự Cố Hầm kỹ thuật và thiết bị trên mạng lưới</title>
+<title>Hệ Thống theo dõi Sự Cố HKT&TB</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
@@ -258,7 +258,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);margin-top
 
 <div class="page" id="page-incidents">
   <div class="hero">
-    <div><h1 class="hero-title">Danh Sách Sự Cố</h1><p class="hero-sub">// Quản lý và cập nhật sự cố hạ tầng</p></div>
+    <div><h1 class="hero-title">Danh Sách Sự Cố</h1><p class="hero-sub">// Quản lý và cập nhật sự cố</p></div>
     <div style="display:flex;gap:.5rem;flex-wrap:wrap">
       <button class="btn btn-teal btn-sm" id="btnExportCSV" onclick="exportCSV()">📥 Xuất CSV</button>
       <label class="btn btn-purple btn-sm" style="cursor:pointer;margin:0">
@@ -281,7 +281,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);margin-top
         <option value="">Tất cả thiết bị</option>
         <option>Khung nắp hầm</option><option>Van chận</option><option>Van outlet</option>
         <option>Đồng hồ tổng</option><option>Khung nắp hầm + tủ tín hiệu</option>
-        <option>Khung nắp hầm + tủ DHT</option><option>Van xả khí</option><option>Van xả cặn</option>
+        <option>Van xả khí</option><option>Van xả cặn</option>
       </select>
       <select class="filter-select" id="incFilterStatus" onchange="renderIncidents()">
         <option value="">Tất cả trạng thái</option>
@@ -372,7 +372,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);margin-top
 </main>
 
 <footer>
-  <div class="footer-left"><strong id="footerBrand">Hệ Thống Quản Lý Sự Cố KNH</strong> · <span id="footerNote">Phòng DCC · TP.HCM</span></div>
+  <div class="footer-left"><strong id="footerBrand">Hệ Thống Quản Lý Sự Cố</strong> · <span id="footerNote">Xí nghiệp Truyền dẫn nước sạch</span></div>
   <div class="footer-stats">
     <div class="f-stat"><div class="num" id="fTotal">–</div><div class="lbl">Tổng sự cố</div></div>
     <div class="f-stat"><div class="num" id="fNapHam" style="color:var(--warn)">–</div><div class="lbl">Nắp hầm</div></div>
