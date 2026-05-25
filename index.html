@@ -192,17 +192,16 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:.8r
 
 <div id="loadingScreen">
   <div style="font-size:3rem">⏳</div>
-  <div>Đang khởi động hệ thống...</div>
+  <div>Đang tải dữ liệu từ máy chủ...</div>
 </div>
 <div id="toastBox"></div>
 
-<!-- LOGIN -->
 <div id="loginPage" style="display:none">
   <div class="login-card">
     <div class="login-logo">
       <div class="login-logo-icon">💧</div>
       <div>
-        <div class="login-logo-text">Hệ Thống theo dõi Sự Cố Hầm kỹ thuật và thiết bị trên mạng lưới</div>
+        <div class="login-logo-text">Hệ Thống theo dõi Sự Cố HKT&TB</div>
         <div class="login-logo-sub">Xí nghiệp Truyền dẫn nước sạch - DCC</div>
       </div>
     </div>
@@ -219,13 +218,12 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:.8r
   </div>
 </div>
 
-<!-- APP SHELL -->
 <div id="appShell" style="display:none">
 <header>
   <div class="logo">
     <div class="logo-icon">💧</div>
     <div>
-      <div class="logo-text">Hệ Thống theo dõi Sự Cố Hầm kỹ thuật và thiết bị trên mạng lưới</div>
+      <div class="logo-text">Hệ Thống theo dõi Sự Cố HKT&TB</div>
       <div class="logo-sub">Trung tâm Điều khiển phân phối</div>
     </div>
   </div>
@@ -248,7 +246,6 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:.8r
 </header>
 
 <main>
-<!-- DASHBOARD -->
 <div class="page active" id="page-dashboard">
   <div class="hero">
     <div><h1 class="hero-title" id="dashTitle">Tổng Hợp Sự Cố Hầm kỹ thuật và các thiết bị trên mạng lưới</h1><p class="hero-sub" id="dashSub">// XNTD · Trung tâm ĐKPP</p></div>
@@ -278,7 +275,6 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:.8r
   </div>
 </div>
 
-<!-- INCIDENTS -->
 <div class="page" id="page-incidents">
   <div class="hero">
     <div><h1 class="hero-title">Danh Sách Sự Cố</h1><p class="hero-sub">// Quản lý và cập nhật sự cố</p></div>
@@ -313,7 +309,6 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:.8r
   </div>
 </div>
 
-<!-- COLUMNS -->
 <div class="page" id="page-columns">
   <div class="hero">
     <div><h1 class="hero-title">Quản Lý Cột Dữ Liệu</h1><p class="hero-sub">// Thêm, ẩn/hiện và xoá cột trong bảng sự cố</p></div>
@@ -351,13 +346,11 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:.8r
   </div>
 </div>
 
-<!-- LISTS -->
 <div class="page" id="page-lists">
   <div class="hero">
     <div><h1 class="hero-title">Quản Lý Danh Sách</h1><p class="hero-sub">// Tên thiết bị & Đơn vị thực hiện</p></div>
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.3rem">
-    <!-- THIẾT BỊ -->
     <div class="panel">
       <div class="panel-header">
         <div class="panel-title"><div class="dot-sm" style="background:var(--accent)"></div>Danh Sách Tên Thiết Bị</div>
@@ -367,9 +360,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:.8r
         <input class="form-control" id="newDeviceName" placeholder="VD: Khung nắp hầm mới..." style="flex:1">
         <button class="btn btn-primary btn-sm" onclick="addListItem('devices')">+ Thêm</button>
       </div>
-      <div id="deviceListItems" style="max-height:420px;overflow-y:auto"></div>
+      <div id="deviceListItems" style="max-height:420px;overflow-y:auto;padding:1rem"></div>
     </div>
-    <!-- ĐƠN VỊ THỰC HIỆN -->
     <div class="panel">
       <div class="panel-header">
         <div class="panel-title"><div class="dot-sm" style="background:var(--accent3)"></div>Danh Sách Đơn Vị Thực Hiện</div>
@@ -379,22 +371,11 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:.8r
         <input class="form-control" id="newUnitName" placeholder="VD: Đội Cơ điện 1..." style="flex:1">
         <button class="btn btn-teal btn-sm" onclick="addListItem('units')">+ Thêm</button>
       </div>
-      <div id="unitListItems" style="max-height:420px;overflow-y:auto"></div>
-    </div>
-  </div>
-  <div class="panel" style="border-color:rgba(245,158,11,.3)">
-    <div class="panel-header">
-      <div class="panel-title"><div class="dot-sm" style="background:var(--warn)"></div>Hướng Dẫn</div>
-    </div>
-    <div style="padding:1rem 1.4rem;font-size:.88rem;color:var(--text3);line-height:1.8">
-      • Các mục trong danh sách sẽ xuất hiện trong ô <strong style="color:var(--accent)">Tên Thiết Bị</strong> và <strong style="color:var(--accent3)">Đơn Vị Thực Hiện</strong> khi thêm/sửa sự cố.<br>
-      • Bấm <strong style="color:var(--warn)">✏️</strong> để đổi tên · <strong style="color:var(--danger)">🗑</strong> để xoá.<br>
-      • Kéo <strong>⠿</strong> để sắp xếp thứ tự hiển thị.
+      <div id="unitListItems" style="max-height:420px;overflow-y:auto;padding:1rem"></div>
     </div>
   </div>
 </div>
 
-<!-- USERS -->
 <div class="page" id="page-users">
   <div class="hero">
     <div><h1 class="hero-title">Quản Lý Tài Khoản</h1><p class="hero-sub">// Thêm, sửa, xoá và phân quyền người dùng</p></div>
@@ -406,7 +387,6 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:.8r
   </div>
 </div>
 
-<!-- SETTINGS -->
 <div class="page" id="page-settings">
   <div class="hero"><div><h1 class="hero-title">Cài Đặt Hệ Thống</h1><p class="hero-sub">// Thay đổi thông tin hiển thị</p></div></div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.3rem">
@@ -449,7 +429,6 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:.8r
 </footer>
 </div>
 
-<!-- MODALS -->
 <div class="modal-overlay" id="incidentModal">
   <div class="modal modal-lg">
     <div class="modal-header"><div class="modal-title" id="incModalTitle">Thêm Sự Cố Mới</div><button class="modal-close" onclick="closeModal('incidentModal')">✕</button></div>
@@ -482,7 +461,6 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:.8r
         <div class="form-group"><label>Phân Quyền</label><select class="form-control" id="uRole" onchange="toggleUserPermissionsUI()"><option value="user">👤 Người Dùng</option><option value="admin">👑 Quản Trị Viên</option></select></div>
         <div class="form-group full-span"><label>Phòng Ban / Ghi Chú</label><input class="form-control" id="uDept"></div>
         <div class="form-group full-span" id="uAllowedColsGroup" style="display:none;background:var(--bg2);padding:14px;border-radius:10px;border:1.5px solid var(--border2)">
-          <!-- QUYỀN HÀNH ĐỘNG -->
           <label style="display:block;margin-bottom:10px;color:var(--warn);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em">⚙️ Quyền Hành Động</label>
           <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:14px">
             <label style="display:flex;align-items:center;gap:7px;font-size:.9rem;cursor:pointer;background:rgba(34,197,94,.08);border:1.5px solid rgba(34,197,94,.25);padding:8px 14px;border-radius:7px">
@@ -499,7 +477,6 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:.8r
             </label>
           </div>
           <div style="height:1px;background:var(--border);margin-bottom:12px"></div>
-          <!-- QUYỀN CỘT -->
           <label style="display:block;margin-bottom:8px;color:var(--accent3);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em">🗂 Quyền Cập Nhật Từng Cột</label>
           <div class="form-hint" style="margin-bottom:10px;font-size:.82rem">Chỉ những cột được tích chọn thì tài khoản này mới được sửa đổi.</div>
           <div id="uAllowedColsList" style="display:flex;flex-wrap:wrap;gap:8px"></div>
@@ -533,16 +510,23 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:.8r
 </div>
 
 <script>
-// CẤU HÌNH - Đổi USE_API thành true nếu muốn đồng bộ Google Sheets
+// --- CHỖ DÁN LINK EXEC CỦA ANH VÀO ĐÂY ---
 const API_URL = "https://script.google.com/macros/s/AKfycbyWLRUFRqYM44mkHRGd2ISFI61XEIfvvcgxyu1JLnOHr4o9FIoyuYUAK_86vlMiH-RWTw/exec";
-const USE_API = false;
 
-// STORAGE: localStorage làm primary, Google Sheets làm backup tùy chọn
+let globalDB = {}; 
+
 const S = {
-  get(k) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : null; } catch { return null; } },
-  set(k, v) {
-    try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) { console.warn('Storage error:', e); }
-    if (USE_API) fetch(API_URL, { method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify({key:k, value:JSON.stringify(v)}) }).catch(()=>{});
+  get: (k) => { 
+     return globalDB[k] || null; 
+  },
+  set: (k, v) => {
+     globalDB[k] = v; // Cập nhật ngay trên màn hình
+     // Gửi ngầm dữ liệu lên Google Sheets
+     fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ key: k, value: JSON.stringify(v) })
+     }).catch(err => console.error("Lỗi đồng bộ:", err));
   }
 };
 
@@ -570,28 +554,19 @@ function initData() {
     const allF = SYSTEM_COLS.filter(c=>c.field!=='_stt'&&c.field!=='_actions').map(c=>c.field);
     S.set('knh_users', [
       {id:'u1',username:'admin',password:'admin123',fullname:'Quản Trị Viên',role:'admin',dept:'Ban Giám Đốc',color:'#7c3aed',created:'2026-04-01',allowedCols:[]},
-      {id:'u2',username:'user1',password:'user123', fullname:'Nguyễn Văn A', role:'user', dept:'Phòng Kỹ Thuật',color:'#0090cc',created:'2026-04-01',allowedCols:allF, canEdit:true, canDelete:false}
+      {id:'u2',username:'user1',password:'user123', fullname:'Nguyễn Văn A', role:'user', dept:'Phòng Kỹ Thuật',color:'#0090cc',created:'2026-04-01',allowedCols:allF, canEdit:true, canDelete:false, canAdd:true}
     ]);
   }
   if (!S.get('knh_incidents'))   S.set('knh_incidents', []);
-  if (!S.get('knh_settings'))    S.set('knh_settings', {title:'Tổng Hợp Sự Cố KNH', subtitle:'// DCC · Phòng Quản Lý Kỹ Thuật · Khu Vực TP.HCM', footerNote:'Phòng DCC · TP.HCM'});
+  if (!S.get('knh_settings'))    S.set('knh_settings', {title:'Tổng Hợp Sự Cố HKT&TB', subtitle:'// XNTD · Trung tâm ĐKPP', footerNote:'Trung tâm Điều khiển phân phối'});
   if (!S.get('knh_custom_cols')) S.set('knh_custom_cols', []);
   if (!S.get('knh_devices')) S.set('knh_devices', [
-    {id:'d1',name:'Khung nắp hầm'},
-    {id:'d2',name:'Khung nắp hầm + tủ tín hiệu'},
-    {id:'d3',name:'Khung nắp hầm + tủ DHT'},
-    {id:'d4',name:'Van chận'},
-    {id:'d5',name:'Van outlet'},
-    {id:'d6',name:'Van xả khí'},
-    {id:'d7',name:'Van xả cặn'},
-    {id:'d8',name:'Đồng hồ tổng'},
-    {id:'d9',name:'Khác'},
+    {id:'d1',name:'Khung nắp hầm'}, {id:'d2',name:'Khung nắp hầm + tủ tín hiệu'}, {id:'d3',name:'Khung nắp hầm + tủ DHT'},
+    {id:'d4',name:'Van chận'}, {id:'d5',name:'Van outlet'}, {id:'d6',name:'Van xả khí'},
+    {id:'d7',name:'Van xả cặn'}, {id:'d8',name:'Đồng hồ tổng'}, {id:'d9',name:'Khác'},
   ]);
   if (!S.get('knh_units')) S.set('knh_units', [
-    {id:'un1',name:'Đội Cơ điện 1'},
-    {id:'un2',name:'Đội Cơ điện 2'},
-    {id:'un3',name:'Đội Cơ điện 3'},
-    {id:'un4',name:'Đơn vị bên ngoài'},
+    {id:'un1',name:'Đội Cơ điện 1'}, {id:'un2',name:'Đội Cơ điện 2'}, {id:'un3',name:'Đội Cơ điện 3'}, {id:'un4',name:'Đơn vị bên ngoài'},
   ]);
 }
 
@@ -743,6 +718,34 @@ function addCustomColumn(){
   hideAddColForm(); renderColManager(); toast(`Đã thêm cột "${name}"!`);
 }
 
+function renderListsPage() {
+   const devs = S.get('knh_devices')||[];
+   const units = S.get('knh_units')||[];
+   document.getElementById('deviceListCount').textContent = devs.length + ' mục';
+   document.getElementById('deviceListItems').innerHTML = devs.map(d=>`<div style="padding:.6rem 1rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:0.9rem"><span>${d.name}</span><button class="btn-xs btn-danger" style="border:none;cursor:pointer" onclick="deleteList('knh_devices','${d.id}')">🗑 Xoá</button></div>`).join('');
+   document.getElementById('unitListCount').textContent = units.length + ' mục';
+   document.getElementById('unitListItems').innerHTML = units.map(u=>`<div style="padding:.6rem 1rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:0.9rem"><span>${u.name}</span><button class="btn-xs btn-danger" style="border:none;cursor:pointer" onclick="deleteList('knh_units','${u.id}')">🗑 Xoá</button></div>`).join('');
+}
+function addListItem(type) {
+   const isDev = type==='devices';
+   const inputId = isDev ? 'newDeviceName' : 'newUnitName';
+   const key = isDev ? 'knh_devices' : 'knh_units';
+   const val = document.getElementById(inputId).value.trim();
+   if(!val) return;
+   const list = S.get(key)||[];
+   list.push({id:'l'+Date.now(), name:val});
+   S.set(key, list);
+   document.getElementById(inputId).value='';
+   toast('Đã thêm vào danh sách!','success');
+   renderListsPage();
+}
+function deleteList(key, id) {
+   const list = S.get(key)||[];
+   S.set(key, list.filter(i=>i.id!==id));
+   toast('Đã xoá khỏi danh sách!','warn');
+   renderListsPage();
+}
+
 function renderDashboard(){
   const inc=S.get('knh_incidents')||[],total=inc.length,waiting=inc.filter(i=>i.state==='Chờ xử lý').length,inProg=inc.filter(i=>i.state==='Đang xử lý').length,done=inc.filter(i=>i.state==='Hoàn thành').length;
   document.getElementById('dashDate').textContent='Cập nhật: '+new Date().toLocaleDateString('vi-VN');
@@ -823,13 +826,20 @@ function appendLocationBlock(data={}){
   const idx=locBlockIndex++,isU=currentUser&&currentUser.role==='user',al=currentUser.allowedCols||[];
   const dis=(f)=>(!isU||al.includes(f))?'':'disabled class="form-control disabled-field"';
   const custom=S.get('knh_custom_cols')||[];
+  
+  // Tải danh sách thiết bị động
+  const devs = S.get('knh_devices')||[];
+  const devOptions = devs.length > 0 
+    ? devs.map(d=>`<option${data.device===d.name?' selected':''}>${d.name}</option>`).join('')
+    : `<option${data.device==='Khung nắp hầm'?' selected':''}>Khung nắp hầm</option><option${data.device==='Van chận'?' selected':''}>Van chận</option>`;
+
   let html=`<div class="loc-block" data-idx="${idx}">
     ${!editIncidentId&&idx>0?`<button class="btn btn-danger btn-xs" style="position:absolute;top:8px;right:8px" onclick="this.parentElement.remove()">✕ Xoá khối</button>`:''}
     <div class="form-grid">
       <div class="form-group full-span"><label>Tên Thiết Bị *</label>
         <select class="form-control" id="fDevice_${idx}" ${dis('device')}>
           <option value="">-- Chọn thiết bị --</option>
-          ${['Khung nắp hầm','Khung nắp hầm + tủ tín hiệu','Khung nắp hầm + tủ DHT','Van chận','Van outlet','Van xả khí','Van xả cặn','Đồng hồ tổng','Khác'].map(d=>`<option${data.device===d?' selected':''}>${d}</option>`).join('')}
+          ${devOptions}
         </select></div>
       <div class="form-group"><label>Đường Kính (DN)</label><input class="form-control" id="fDN_${idx}" value="${data.dn||''}" ${dis('dn')} placeholder="VD: 500"></div>
       <div class="form-group"><label>Mã Vị Trí</label><input class="form-control" id="fCode_${idx}" value="${data.code||''}" ${dis('code')} placeholder="VD: CL1052"></div>
@@ -952,7 +962,7 @@ function saveUser(){
     if(!pw){toast('Vui lòng nhập mật khẩu!','error');return;}
     if(users.find(u=>u.username===un)){toast('Tên đăng nhập đã tồn tại!','error');return;}
     const cs=['#0090cc','#059669','#d97706','#7c3aed','#db2777','#0891b2'];
-    users.push({id:'u'+Date.now(),username:un,password:pw,fullname:fn,role,dept,allowedCols:ac,canEdit,canDelete,color:cs[users.length%cs.length],created:new Date().toISOString().slice(0,10),mustChangePassword:role==='user'});
+    users.push({id:'u'+Date.now(),username:un,password:pw,fullname:fn,role,dept,allowedCols:ac,canEdit,canDelete,canAdd,color:cs[users.length%cs.length],created:new Date().toISOString().slice(0,10),mustChangePassword:role==='user'});
     toast('Đã thêm tài khoản!');
   }
   S.set('knh_users',users); closeModal('userModal'); renderUsers();
@@ -968,11 +978,22 @@ function stateBadge(s){const m={'Chờ xử lý':'bd-yellow','Đang xử lý':'b
 document.getElementById('loginPass').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
 document.getElementById('loginUser').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
 
-function bootApp(){
-  initData();
-  document.getElementById('loadingScreen').style.display='none';
-  document.getElementById('loginPage').style.display='flex';
+async function bootApp() {
+  try {
+     const res = await fetch(API_URL);
+     const data = await res.json();
+     globalDB = Object.keys(data).length > 0 ? data : {};
+  } catch(e) {
+     console.error("Lỗi tải API:", e);
+     toast('Không thể tải dữ liệu. Chạy chế độ Offline!','error');
+  }
+  
+  initData(); // Nạp dữ liệu mặc định nếu Database trống (lần đầu tiên hoặc lỗi)
+  document.getElementById('loadingScreen').style.display = 'none';
+  document.getElementById('loginPage').style.display = 'flex';
 }
+
+// Khởi chạy hệ thống
 bootApp();
 </script>
 </body>
