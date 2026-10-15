@@ -94,7 +94,7 @@
   <div class="hero">
     <div><h1 class="hero-title">Danh Sách Sự Cố</h1><p class="hero-sub">// Quản lý và cập nhật sự cố</p></div>
     <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
-      <button class="btn btn-teal btn-sm" onclick="exportCSV()">📥 Xuất CSV</button>
+      <button class="btn btn-teal btn-sm" onclick="exportExcel()">📥 Xuất Excel</button>
       <label class="btn btn-purple btn-sm admin-only" style="cursor:pointer;margin:0">📤 Nhập Excel<input type="file" id="btnImportExcel" accept=".xlsx,.xls" style="display:none" onchange="importExcel(event)"></label>
       <button class="btn btn-primary admin-only" id="btnAddIncidentTop" onclick="openIncidentModal()">+ Thêm Sự Cố</button>
     </div>
